@@ -1,0 +1,268 @@
+<!OCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಮಹಿತಿ ಸಾಗರ | ಪ್ರೊ ವೆಬ್‌ಸೈಟ್</title>
+    <style>
+        /* ಬೇಸಿಕ್ ಸೆಟ್ಟಿಂಗ್ಸ್ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            scroll-behavior: smooth;
+        }
+
+        /* ನ್ಯಾವಿಗೇಷನ್ ಬಾರ್ */
+        header {
+            background-color: #0f172a;
+            color: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        header nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* ಮೇನ್ ಬ್ಯಾನರ್ ಸೆಕ್ಷನ್ */
+        .hero {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #1e3a8a, #0369a1);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .banner h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            color: #e2e8f0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ವಿಡಿಯೋ ಮತ್ತು ಕಂಟೆಂಟ್ ಸೆಕ್ಷನ್ */
+        .section-title {
+            font-size: 28px;
+            color: #0f172a;
+            margin: 40px 0 20px 0;
+            position: relative;
+        }
+
+        .video-container {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* ರೆಸ್ಪಾನ್ಸಿವ್ ವಿಡಿಯೋ ಪ್ಲೇಯರ್ */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ಸೋಶಿಯಲ್ ಮೀಡಿಯಾ ಕಾರ್ಡ್ಸ್ */
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 280px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 { margin-bottom: 10px; }
+        .card p { color: #64748b; font-size: 14px; margin-bottom: 20px; }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+        }
+
+        .btn-yt { background-color: #ef4444; }
+        .btn-blog { background-color: #f59e0b; }
+
+        /* ಕಾಂಟ್ಯಾಕ್ಟ್ ಫಾರ್ಮ್ ಸೆಕ್ಷನ್ */
+        .contact-form {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto 60px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .btn-submit {
+            background-color: #0f172a;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-submit:hover { background-color: #1e293b; }
+
+        /* ಫುಟರ್ */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ಮಹಿತಿ ಸಾಗರ</div>
+        <nav>
+            <a href="#">ಮುಖಪುಟ</a>
+            <a href="#videos">ವಿಡಿಯೋಗಳು</a>
+            <a href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="banner">
+            <h1>ಮಹಿತಿ ಸಾಗರ ಡಿಜಿಟಲ್ ಹಬ್</h1>
+            <p>ತಂತ್ರಜ್ಞಾನ, ಕೌಶಲ್ಯಗಳು ಮತ್ತು ಕ್ರಿಯೇಟಿವ್ ಐಡಿಯಾಗಳ ಜ್ಞಾನದ ಕಡಲು.</p>
+        </div>
+
+        <h2 class="section-title" id="videos">ನಮ್ಮ ಇತ್ತೀಚಿನ ವಿಡಿಯೋ</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2 class="section-title">ನಮ್ಮ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>ಯೂಟ್ಯೂಬ್ ಚಾನೆಲ್</h3>
+                <p>ಪ್ರತಿದಿನ ಹೊಸ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಉಪಯುಕ್ತ ಮಾಹಿತಿ ವೀಕ್ಷಿಸಿ.</p>
+                <a href="https://www.youtube.com" target="_blank" class="btn btn-yt">Subscribe ಮಾಡಿ</a>
+            </div>
+            <div class="card">
+                <h3>ಅಧಿಕೃತ ಬ್ಲಾಗ್</h3>
+                <p>ವಿವರವಾದ ಆರ್ಟಿಕಲ್‌ಗಳು ಮತ್ತು ಲೇಖನಗಳನ್ನು ಉಚಿತವಾಗಿ ಓದಿ.</p>
+                <a href="https://www.blogger.com" target="_blank" class="btn btn-blog">ಬ್ಲಾಗ್ ಓದಿ</a>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="contact">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
+        <div class="contact-form">
+            <div class="form-group">
+                <label>ನಿಮ್ಮ ಹೆಸರು:</label>
+                <input type="text" placeholder="ನಿಮ್ಮ ಹೆಸರನ್ನು ಟೈಪ್ ಮಾಡಿ">
+            </div>
+            <div class="form-group">
+                <label>ಇಮೇಲ್ ಐಡಿ:</label>
+                <input type="email" placeholder="ನಿಮ್ಮ ಇಮೇಲ್ ಹಾಕಿ">
+            </div>
+            <div class="form-group">
+                <label>ನಿಮ್ಮ ಸಂದೇಶ:</label>
+                <textarea rows="4" placeholder="ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಇಲ್ಲಿ ಬರೆಯಿರಿ..."></textarea>
+            </div>
+            <button class="btn-submit">ಸಂದೇಶ ಕಳುಹಿಸಿ</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 ಮಹಿತಿ ಸಾಗರ. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+    </footer>
+
+</body>
+</html>
